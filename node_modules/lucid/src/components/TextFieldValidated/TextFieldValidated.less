@@ -1,0 +1,19 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-TextFieldValidated {
+	width: 100%;
+
+	&.lucid-Validation-is-error {
+		.lucid-TextField {
+			.inset-box-shadow(@featured-color-danger);
+
+			border-color: @featured-color-danger;
+
+			&:focus {
+				.focus-glow(@featured-color-danger-30);
+			}
+		}
+	}
+}
+

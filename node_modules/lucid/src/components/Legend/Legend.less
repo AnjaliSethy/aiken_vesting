@@ -1,0 +1,60 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-Legend {
+	display: inline-flex;
+	color: @color-darkGray;
+	font-size: @fontSize;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: @color-white;
+
+	&-is-horizontal {
+		flex-direction: row;
+		height: @size-standard-height;
+		padding: 0 (@size-S / 2);
+	}
+
+	&-is-horizontal&-is-reversed {
+		flex-direction: row-reverse;
+	}
+
+	&-is-vertical {
+		flex-direction: column;
+	}
+
+	&-is-vertical&-is-reversed {
+		flex-direction: column-reverse;
+	}
+
+	&-has-borders {
+		border: @border-lightBorder;
+		border-radius: @size-borderRadius;
+	}
+
+	&-is-vertical&-has-borders {
+		padding: (@size-S / 2) @size-S;
+	}
+
+	&-Item {
+		display: flex;
+		align-items: center;
+	}
+
+	&-is-vertical &-Item {
+		margin-top: @size-S / 2;
+		margin-bottom: @size-S / 2;
+	}
+
+	&-is-horizontal &-Item {
+		margin-left: @size-L / 2;
+		margin-right: @size-L / 2;
+	}
+
+	&-Item-indicator {
+		flex-shrink: 0;
+		margin-right: @size-XS;
+	}
+}
+

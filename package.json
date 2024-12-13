@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "lucid": "^2.21.0",
+    "lucid-cardano": "^0.10.11",
+    "deno.enable": true,
+    "type": "module",
+    "imports": {
+    "https://deno.land/x/typebox@0.25.13/": "https://deno.land/x/typebox@0.24.1/"
+  }
+  }
+}
+
+

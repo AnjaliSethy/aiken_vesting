@@ -1,0 +1,21 @@
+@import (reference) '../../../styles/variables.less';
+@import (reference) '../../../styles/mixins.less';
+
+.lucid-SuccessLightIcon {
+	&-check {
+		fill: @featured-color-success;
+
+		&-is-disabled {
+			fill: @color-disabledText;
+		}
+	}
+
+	&-background {
+		fill: @color-white;
+	}
+
+	&-is-clickable:hover > &-background {
+		fill: @featured-color-success-backgroundColorLight;
+	}
+}
+

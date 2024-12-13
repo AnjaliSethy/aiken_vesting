@@ -1,0 +1,8 @@
+npm-debug.log*
+node_modules
+**/*.swp
+**/*.swo
+.idea
+.babelrc
+yarn.lock
+**/__snapshots__

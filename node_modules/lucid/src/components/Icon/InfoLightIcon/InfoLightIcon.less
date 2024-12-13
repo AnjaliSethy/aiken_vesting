@@ -1,0 +1,20 @@
+@import (reference) '../../../styles/variables.less';
+@import (reference) '../../../styles/mixins.less';
+
+.lucid-InfoLightIcon {
+	&-mark {
+		fill: @featured-color-info;
+	}
+
+	&-mark-is-disabled {
+		fill: @color-disabledText;
+	}
+
+	&-background {
+		fill: @color-white;
+	}
+
+	&-is-clickable:hover > &-background {
+		fill: @featured-color-info-backgroundColorLight;
+	}
+}

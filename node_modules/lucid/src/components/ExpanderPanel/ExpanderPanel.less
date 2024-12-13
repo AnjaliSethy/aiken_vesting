@@ -1,0 +1,70 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-ExpanderPanel {
+	&-icon {
+		.box-sizing();
+
+		width: @size-expander-button;
+		height: @size-expander-button;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: @size-S;
+	}
+
+	&-header {
+		font-size: @size-font-XL;
+		line-height: @size-font-XL;
+		font-weight: bold;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			> .lucid-ExpanderPanel-icon {
+				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+
+				border: solid 1px @featured-color-default-borderColor;
+				border-radius: @size-borderRadius;
+				outline: none;
+
+				.lucid-ChevronIcon {
+					fill: @color-darkGray;
+				}
+			}
+		}
+	}
+
+	&-content-inner {
+		border-top: @border-lightBorder;
+
+		&-has-padding {
+			padding: @size-standard;
+		}
+	}
+
+	> .lucid-Panel-content.lucid-Panel-content { // increased specificity
+		padding: 0;
+	}
+
+	> .lucid-Panel-Header {
+		border-bottom: none;
+	}
+
+	&-is-disabled {
+		.opacity();
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			color: @color-disabledText;
+			.no-cursor();
+		}
+	}
+}
+

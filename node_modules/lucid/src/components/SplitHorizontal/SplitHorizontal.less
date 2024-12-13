@@ -1,0 +1,20 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-SplitHorizontal {
+	& > &-inner {
+		& > .lucid-SplitHorizontal-Divider {
+			background: @color-gray;
+			cursor: ns-resize;
+		}
+
+		& > .lucid-SplitHorizontal-TopPane {
+			.no-safari-flicker();
+		}
+
+		& > .lucid-SplitHorizontal-BottomPane {
+			.no-safari-flicker();
+		}
+	}
+}
+

@@ -1,0 +1,16 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-Axis {
+	&-tick-text {
+		font: @font-chart;
+		fill: @color-textColor;
+	}
+
+	&-domain,
+	&-tick {
+		fill: none;
+		stroke: @color-gray;
+		shape-rendering: crispEdges;
+	}
+}

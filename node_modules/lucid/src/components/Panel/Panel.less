@@ -1,0 +1,52 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-Panel {
+	overflow: hidden;
+	border-radius: @size-borderRadius;
+	margin: 0;
+	position: relative;
+	background-color: @color-white;
+	border: @border-standardBorder;
+
+	&&-has-margin {
+		margin: 0 @size-standard @size-standard @size-standard;
+	}
+
+	.lucid-Panel-is-scrollable& {
+		display: flex;
+		flex-direction: column;
+	}
+
+	& > &-Header {
+		padding: @size-standard;
+		border-bottom: @border-lightBorder;
+
+		.lucid-Panel-is-scrollable& {
+			flex-shrink: 0;
+		}
+	}
+
+	& > &-content {
+		.lucid-Panel-is-not-gutterless& {
+			overflow: auto;
+			padding: @size-standard;
+		}
+
+		.lucid-Panel-is-scrollable& {
+			overflow: auto;
+			flex: 1 1 auto;
+		}
+	}
+
+	& > &-Footer {
+		text-align: right;
+		padding: @size-standard;
+		border-top: @border-lightBorder;
+
+		.lucid-Panel-is-scrollable& {
+			flex-shrink: 0;
+		}
+	}
+}
+

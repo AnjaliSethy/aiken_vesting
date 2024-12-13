@@ -1,0 +1,19 @@
+@import (reference) '../../../styles/variables.less';
+@import (reference) '../../../styles/mixins.less';
+
+.lucid-EligibilityIcon {
+	&-half-circle {
+		fill: @featured-color-default;
+		stroke: @featured-color-danger;
+
+		&-is-disabled {
+			stroke: @color-disabledText;
+		}
+	}
+
+	&-is-selected {
+		fill: @featured-color-success;
+		stroke: @color-transparent;
+	}
+}
+
